@@ -1,0 +1,93 @@
+{
+	"name": "GuMaxDD",
+	"version": "1.6.1",
+	"author": [
+		"[http://paulgu.com/ Paul Y. Gu]",
+		"Jack Phoenix"
+	],
+	"url": "https://www.mediawiki.org/wiki/Skin:GuMaxDD",
+	"descriptionmsg": "gumaxdd-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
+	"ValidSkinNames": {
+		"gumaxdd": {
+			"class": "SkinTemplate",
+			"args": [
+				{
+					"name": "gumaxdd",
+					"bodyOnly": true,
+					"styles": [
+						"skins.gumaxdd"
+					],
+					"scripts": [
+						"skins.gumaxdd.js"
+					],
+					"template": "GuMaxDDTemplate"
+				}
+			]
+		}
+	},
+	"MessagesDirs": {
+		"SkinGuMaxDD": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"GuMaxDDTemplate": "GuMaxDD.skin.php"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteSkinPath": "GuMaxDD/resources"
+	},
+	"ResourceModules": {
+		"skins.gumaxdd": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {
+				"normalize": true,
+				"elements": true,
+				"interface": true,
+				"logo": true,
+				"content-links": true,
+				"content-media": true,
+				"interface-message-box": true,
+				"interface-category": true,
+				"content-tables": true,
+				"i18n-ordered-lists": true,
+				"i18n-all-lists-margins": true,
+				"i18n-headings": true
+			},
+			"styles": {
+				"main.css": {
+					"media": "screen"
+				},
+				"gumax_template.css": {
+					"media": "screen"
+				},
+				"gumax_droppy.css": {
+					"media": "screen"
+				},
+				"print.css": {
+					"media": "print"
+				}
+			}
+		},
+		"skins.gumaxdd.js": {
+			"scripts": [
+				"scripts/jquery.droppy.js",
+				"scripts/jquery.clickmenu.js"
+			]
+		}
+	},
+	"ResourceModuleSkinStyles": {
+		"gumaxdd": {
+			"+ext.echo.styles.badge": "skinStyles/echo.badge.css",
+			"+mediawiki.action.view.filepage": "skinStyles/mediawiki.action.view.filepage.css",
+			"+mediawiki.action.view.redirectPage": "skinStyles/mediawiki.action.view.redirectPage.css",
+			"+mediawiki.special.userlogin.common.styles": "skinStyles/mediawiki.special.userlogin.common.styles.css"
+		}
+	},
+	"manifest_version": 2
+}

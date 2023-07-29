@@ -1,0 +1,13 @@
+/*
+ * -----------------------------------
+ * Right-to-left fixes for GuMax
+ * -----------------------------------
+ */
+
+/*
+ * Note: be aware of the order
+ */
+
+@import url("rtl.css");
+@import url("gumax_rtl_template.css");
+
